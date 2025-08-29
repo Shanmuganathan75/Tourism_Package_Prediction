@@ -1,5 +1,5 @@
 # for data manipulation
-rom sklearn.impute import SimpleImputer
+from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline, make_pipeline
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
