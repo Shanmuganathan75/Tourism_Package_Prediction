@@ -55,4 +55,4 @@ jobs:
       - name: Push files to Frontend Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HGF_TOKEN }}
-        run: python "01) MLOPS/04) Hosting/hosting.py"
+        run: python "01) MLOPS/04) HOSTING/hosting.py"
