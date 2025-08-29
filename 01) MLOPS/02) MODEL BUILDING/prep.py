@@ -41,7 +41,7 @@ preprocessor = ColumnTransformer(
     ])
 
 X = TourData1.drop('ProdTaken', axis=1)
-Y = TourData1['ProdTaken']
+y = TourData1['ProdTaken']
 
 # Perform train-test split
 Xtrain, Xtest, ytrain, ytest = train_test_split(
