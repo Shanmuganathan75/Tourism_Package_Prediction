@@ -30,7 +30,7 @@ NumberOfTrips=st.number_input("Number of Trip", min_value=1, max_value=10, value
 Passport=st.number_input("Passport Availability", min_value=0, max_value=1, value=1, step=1) 
 PitchSatisfactionScore=st.number_input("Pitch Satisfaction Score", min_value=1, max_value=5, value=3, step=1) 
 OwnCar=st.number_input("Own Car", min_value=0, max_value=1, value=1, step=1) 
-NumberOfChildrenVisiting==st.number_input("Number of Children Visiting", min_value=1, max_value=5, value=3, step=1) 
+NumberOfChildrenVisiting=st.number_input("Number of Children Visiting", min_value=1, max_value=5, value=3, step=1) 
 Designation=st.selectbox("Designation ", ["VP","AVP","Manager","Senior Manager","Executive"])
 MonthlyIncome=st.number_input("Monthly Income", min_value=100, max_value=300000, value=15000, step=100)  
 
