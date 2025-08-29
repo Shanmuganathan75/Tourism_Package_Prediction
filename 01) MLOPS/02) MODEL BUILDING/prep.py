@@ -42,11 +42,6 @@ preprocessor = ColumnTransformer(
 
 X = TourData1.drop('ProdTaken', axis=1)
 Y = TourData1['ProdTaken']
- 
-
-# Split into X (features) and y (target)
-X = df.drop(columns=[target_col])
-y = df[target_col]
 
 # Perform train-test split
 Xtrain, Xtest, ytrain, ytest = train_test_split(
