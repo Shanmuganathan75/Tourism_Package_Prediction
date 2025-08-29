@@ -13,7 +13,7 @@ st.write("""
 This application predicts the likelihood of a Package selection prediction.
 Please enter the   data below to get a prediction.
 """)
-col1, col2, Col3 = st.columns(3)
+col1, col2, col3 = st.columns(3)
 with col1:
 # Categorical inputs
   TypeofContact = st.selectbox("Type of Contact ", ["Company Invited", "Self Enquiry"])
