@@ -3,7 +3,8 @@ from huggingface_hub import HfApi, create_repo
 import os
 
 # Create the directory if it doesn't exist
-os.makedirs("/content/drive/MyDrive/01) GreatLearning/06) Advanced MLOPS/04) Tourism Package Prediction/01) MLOPS/02) MODEL BUILDING", exist_ok=True)
+base_dir = os.path.join(os.getcwd(), "01) MLOPS/02) MODEL BUILDING")
+os.makedirs(base_dir, exist_ok=True)
 
 repo_id = "Shanmuganathan75/Tourism-Package-Prediction"
 repo_type = "dataset"
