@@ -9,7 +9,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 # for hugging face space authentication to upload files
 from huggingface_hub import login, HfApi
-
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 # Define constants for the dataset and output paths
 api = HfApi(token=os.getenv("HF_TOKEN"))
 DATASET_PATH = "hf://datasets/Shanmuganathan75/Tourism-Package-Prediction/tourism.csv"
