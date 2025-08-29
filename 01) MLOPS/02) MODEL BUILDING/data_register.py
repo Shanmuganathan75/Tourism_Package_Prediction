@@ -2,7 +2,7 @@ from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 from huggingface_hub import HfApi, create_repo
 import os
 
-# Create the directory if it doesn't exist
+# Create the directory if it doesn't exist 
 base_dir = os.path.join(os.getcwd(), "01) MLOPS/02) MODEL BUILDING")
 os.makedirs(base_dir, exist_ok=True)
 
