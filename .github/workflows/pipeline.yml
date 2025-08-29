@@ -26,7 +26,7 @@ jobs:
       - name: Run Data Preparation
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python "01) MLOPS/02) Model Building/prep.py"
+        run: python "01) MLOPS/02) MODEL BUILDING/prep.py"
 
 
   model-traning:
@@ -43,7 +43,7 @@ jobs:
       - name: Model Building
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python "01) MLOPS/02) Model Building/train.py"
+        run: python "01) MLOPS/02) MODEL BUILDING/train.py"
 
   deploy-hosting:
     runs-on: ubuntu-latest
