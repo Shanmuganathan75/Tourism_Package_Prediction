@@ -5,7 +5,7 @@ on:
     branches:
       - main  # Automatically triggers on push to the main branch
 jobs:
-  register-dataset:
+  REGISTER-DATASET:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,8 +16,8 @@ jobs:
           HF_TOKEN: ${{ secrets.HGF_TOKEN }}
         run: python "01) MLOPS/02) MODEL BUILDING/data_register.py"
 
-  data-prep:
-    needs: register-dataset
+  DATA-PREPARATION:
+    needs: REGISTER-DATASET
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -29,8 +29,8 @@ jobs:
         run: python "01) MLOPS/02) MODEL BUILDING/prep.py"
 
 
-  model-traning:
-    needs: data-prep
+  MODEL-TRAINING:
+    needs: DATA-PREPARATION
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -45,9 +45,9 @@ jobs:
           HF_TOKEN: ${{ secrets.HGF_TOKEN }}
         run: python "01) MLOPS/02) MODEL BUILDING/train.py"
 
-  deploy-hosting:
+  DEPLOY-HOSTING:
     runs-on: ubuntu-latest
-    needs: [model-traning,data-prep,register-dataset]
+    needs: [MODEL-TRAINING,DATA-PREPARATION,REGISTER-DATASET]
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
