@@ -37,7 +37,7 @@ MonthlyIncome=st.number_input("Monthly Income", min_value=100, max_value=300000,
 # Assemble input into DataFrame
 input_data = pd.DataFrame([{
       'Customer_ID':CustomerID.
-      'Age ':Age,
+      'Age':Age,
       'Type_of_contact':TypeofContact,
       'City_Tier' :CityTier,
       'Duration_of_pitch':DurationOfPitch,
