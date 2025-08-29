@@ -41,7 +41,7 @@ numerical_features= [
     'PreferredPropertyStar',
     'NumberOfTrips',
     'Passport',
-    'PitchSatisfactionScore'.
+    'PitchSatisfactionScore',
     'OwnCar',
     'NumberOfChildrenVisiting',
     'MonthlyIncome'
