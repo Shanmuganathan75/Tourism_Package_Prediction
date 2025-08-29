@@ -32,6 +32,46 @@ Xtest = pd.read_csv(Xtest_path)
 ytrain = pd.read_csv(ytrain_path)
 ytest = pd.read_csv(ytest_path)
 
+numerical_features= [
+    'Age',
+    'CityTier',
+    'DurationOfPitch',
+    'NumberOfPersonVisiting',
+    'NumberOfFollowups',
+    'PreferredPropertyStar',
+    'NumberOfTrips',
+    'Passport',
+    'PitchSatisfactionScore'.
+    'OwnCar',
+    'NumberOfChildrenVisiting',
+    'MonthlyIncome'
+]
+categorical_features= [
+    'TypeofContact',
+    'Occupation',
+    'Gender',
+    'ProductPitched',
+    'MaritalStatus',
+    'Tool wear'
+]
+# Define transformers
+numerical_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='mean')),
+    ('scaler', StandardScaler())
+])
+
+categorical_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='most_frequent')),
+    ('onehot', OneHotEncoder(handle_unknown='ignore'))
+])
+
+# ColumnTransformer (preprocessor)
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', numerical_transformer, numerical_features),
+        ('cat', categorical_transformer, categorical_features)
+    ]
+)
 
 
 # Set the clas weight to handle class imbalance
