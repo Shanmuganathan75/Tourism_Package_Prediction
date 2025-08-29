@@ -1,4 +1,5 @@
 # for data manipulation
+from sklearn.pipeline import Pipeline, make_pipeline
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import make_column_transformer
