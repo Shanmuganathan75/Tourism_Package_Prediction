@@ -32,25 +32,7 @@ Xtest = pd.read_csv(Xtest_path)
 ytrain = pd.read_csv(ytrain_path)
 ytest = pd.read_csv(ytest_path)
 
-TourData1 = pd.read_csv("01) MLOPS/02) MODEL BUILDING/data/Tourism.csv")
 
-categorical_features = TourData1.select_dtypes(include=['object']).columns
-categorical_features
-
-numerical_features = TourData1.select_dtypes(include=['int64','float64']).columns
-numerical_features = numerical_features.drop('ProdTaken')
-numerical_features
-
-print(f"\nCategorical features: {list(categorical_features)}")
-print(f"Numerical features: {list(numerical_features)}")
-
-numerical_transformer = Pipeline(steps=[('imputer', SimpleImputer(strategy='mean')),('scaler', StandardScaler())])
-categorical_transformer = Pipeline(steps=[('imputer', SimpleImputer(strategy='most_frequent')),('onehot', OneHotEncoder(handle_unknown='ignore'))])
-
-preprocessor = make_column_transformer(
-    (numerical_transformer, numerical_features),
-    (categorical_transformer, categorical_features)
-)
 
 # Set the clas weight to handle class imbalance
 class_weight = ytrain.value_counts()[0] / ytrain.value_counts()[1]
