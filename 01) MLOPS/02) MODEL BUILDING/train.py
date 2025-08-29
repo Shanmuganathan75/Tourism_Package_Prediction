@@ -32,6 +32,7 @@ Xtest = pd.read_csv(Xtest_path)
 ytrain = pd.read_csv(ytrain_path)
 ytest = pd.read_csv(ytest_path)
 
+TourData1 = pd.read_csv("01) MLOPS/02) MODEL BUILDING/data/Tourism.csv")
 
 categorical_features = TourData1.select_dtypes(include=['object']).columns
 categorical_features
