@@ -4,7 +4,7 @@ from huggingface_hub import hf_hub_download
 import joblib
 
 # Download and load the model
-model_path = hf_hub_download(repo_id="Shanmuganathan75/Tourism-Package-Pediction", filename="best_touriim_prediction_model_v1.joblib")
+model_path = hf_hub_download(repo_id="Shanmuganathan75/Tourism-Package-Prediction", filename="best_tourism_prediction_model_v1.joblib")
 model = joblib.load(model_path)
 
 # Streamlit UI for Tourism  Package Prediction
