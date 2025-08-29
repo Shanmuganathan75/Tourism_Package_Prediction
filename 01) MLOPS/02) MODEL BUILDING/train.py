@@ -55,7 +55,7 @@ categorical_features= [
     'Gender',
     'ProductPitched',
     'MaritalStatus',
-    'Tool wear'
+    'Designation'
 ]
 # Define transformers
 numerical_transformer = Pipeline(steps=[
