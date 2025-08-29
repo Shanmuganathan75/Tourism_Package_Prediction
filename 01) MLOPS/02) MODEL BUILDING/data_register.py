@@ -10,7 +10,7 @@ repo_id = "Shanmuganathan75/Tourism-Package-Prediction"
 repo_type = "dataset"
 
 # Initialize API client
-api = HfApi(token=os.getenv("HF_TOKEN"))
+api = HfApi(token=os.getenv("HGF_TOKEN"))
 
 # Step 1: Check if the space exists
 try:
